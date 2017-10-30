@@ -19,3 +19,10 @@ ggplot(data = dat, aes(x = F_mass)) +
   labs(x = "female mass (g)")
 
 
+
+ggplot(data = dat, aes(x = F_mass)) +
+  geom_histogram(fill = "blue", alpha = 0.3) +
+  geom_histogram(aes(x = M_mass), alpha = 0.3) +
+  scale_x_log10() +
+  labs(x = "female mass (g)") +
+  facet_wrap(~ Family)
