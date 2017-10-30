@@ -26,3 +26,11 @@ ggplot(data = dat, aes(x = F_mass)) +
   scale_x_log10() +
   labs(x = "female mass (g)") +
   facet_wrap(~ Family)
+
+
+ggplot(data = dat, aes(x = F_wing)) +
+  geom_histogram(fill = "blue", alpha = 0.3) +
+  geom_histogram(aes(x = M_wing), alpha = 0.3) +
+  scale_x_log10() +
+  labs(x = "female mass(g)") + 
+  facet_wrap(~ Family)
